@@ -1,0 +1,40 @@
+baseURL: "https://quietpls.github.io/"
+languageCode: "en-us"
+title: "조용히 좀 해봐"
+theme: "papermod"
+
+menu:
+    main:
+        - name: Archive
+          url: /archives
+          weight: 5
+        - name: Search
+          url: /search
+          weight: 10
+        - name: Tags
+          url: /tags
+          weight: 10
+        - name: Categories
+          url: /categories
+          weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+params:
+    env: production
+    comments: true
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+googleAnalytics: G-97D486MCX4
